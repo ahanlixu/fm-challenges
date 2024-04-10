@@ -19,9 +19,9 @@ body {
 
     background-color: var(--yellow);
     color: var(--black);
-    font-family: "Figtree", Helvetica, sans-serif;
+    font-family: "Figtree", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 }
 
@@ -29,37 +29,29 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    max-width: 384px;
-    /* max-height: 522px; */
+    /* max-width: 327px; */
+    margin: 24px;
     padding: 24px;
     border: 1px solid var(--black);
     border-radius: 20px;
     filter: drop-shadow(8px 8px var(--black));
 }
 
-.card:hover {
-    filter: drop-shadow(16px 16px var(--black));
-    transition: filter 0.2s ease-in-out;
-}
-
-.card:hover>.card-title {
-    color: var(--yellow);
-    transition: color 0.2s ease-in-out;
-}
-
 .card-image {
+    min-height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 .card-tag-list {
-    margin: 24px 0px;
+    margin: 24px 0px 16px;
 }
 
 .card-tag {
     background-color: var(--yellow);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 800;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
 }
 
@@ -68,18 +60,13 @@ body {
 }
 
 .card-date {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .card-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
 }
-
-/* .card-title:hover {
-    color: var(--yellow);
-    transition: color 0.2s ease-in-out;
-} */
 
 .card-desc {
     color: var(--grey);
@@ -95,9 +82,43 @@ body {
     display: inline;
     width: 32px;
     height: 32px;
-    margin-right: 8px;
+    margin-right: 12px;
 }
 
 .card-author-name {
+    font-size: 14px;
     font-weight: 800;
+}
+
+@media (width > 375px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .card {
+        max-width: 384px;
+    }
+
+    .card:hover {
+        filter: drop-shadow(16px 16px var(--black));
+        transition: filter 0.2s ease-in-out;
+    }
+
+    .card:hover>.card-title {
+        color: var(--yellow);
+        transition: color 0.2s ease-in-out;
+    }
+
+    .card-tag {
+        font-size: 14px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-date {
+        font-size: 14px;
+    }
 }

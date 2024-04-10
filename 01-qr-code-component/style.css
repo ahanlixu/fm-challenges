@@ -1,23 +1,31 @@
-body {
-    background-color: #D5E1EF;
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
 }
 
-.container {
+body {
+    background-color: var(--light-gray);
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .qr-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 20px;
     height: 497px;
     width: 320px;
     text-align: center;
+    filter: drop-shadow(0px 25px 25px rgba(0, 0, 0, 0.0477));
 }
 
 .qr-img {
@@ -28,30 +36,19 @@ body {
 }
 
 .qr-text {
-    margin: 8px 32px;
+    margin: 24px;
 }
 
 .qr-text h1 {
-    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 22px;
-    color: #1F314F;
+    line-height: 1.25;
+    color: var(--dark-blue);
+    margin: 0px 0px 16px;
 }
 
 .qr-text p {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    color: #7D889E;
-}
-
-
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--grayish-blue);
+    line-height: 1.35;
+    letter-spacing: 0.2px;
 }
